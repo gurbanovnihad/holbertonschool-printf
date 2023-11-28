@@ -35,17 +35,13 @@ int _printf(const char *format, ...)
 			cCount += strLength, strLength = 0;
 		}
 		else if (format[index] == '%' && format[index + 1] == '%')
-		{
 			curChar = '%', write(1, &curChar, 1), index += 2, cCount++;
-		}
+		else if (format[index] == '%' && format[index + 1] == '\0')
+			return (-1);
 		else if (format[index] == '\\' && format[index + 1] == 'n')
-		{
 			write(1, &newline, 1), index += 2, cCount++;
-		}
 		else
-		{
 			curChar = format[index], write(1, &curChar, 1), index++, cCount++;
-		}
 	}
 	va_end(args);
 	return (cCount);
