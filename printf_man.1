@@ -1,0 +1,44 @@
+.\" Manual Page for the _Printf Project.
+.\"
+.TH _PRINTF 1 "2 Dec 2023" "1.0" "Printf Project Manual"
+.SH NAME
+\_printf \- formatted output conversion
+.SH SYNOPSIS
+#include "main.h"
+.br
+int \_printf(const char *format, ...);
+.SH DESCRIPTION
+The \_printf function outputs values based on a specified format. This implementation includes our version of the printf function, covering the basic and main functions.
+.br
+**Return:** The count of printed characters (excluding the null byte used for string termination).
+.br
+**Conversion specifiers:**
+.TP
+%c
+prints a single character.
+.TP
+%s
+prints a string.
+.TP
+%d
+prints an integer as a signed decimal (base 10) number.
+.TP
+%i
+prints the integer in base 10 (equivalent to "d").
+.TP
+%
+prints a percent sign.
+.br
+A conversion specifier starts with a percent sign and concludes with the conversion characters listed above.
+.SH EXAMPLES
+\_printf("Character: %c", character);
+.br
+\_printf("String: %s", string);
+.br
+\_printf("Integer: %d", integer); (or use "%i" to print an integer, depending on the case).
+.SH SEE ALSO
+printf(1), _printf(2), printf(3), sprintf(3), snprintf(3), vsprintf(3), vsnprintf(3).
+.SH BUGS
+Report any bugs to 7404@holbertonschool.com or 7392@holbertonschool.com.
+.SH AUTHOR
+Nihad Gurbanov & Saleh Shahverdiyev - Students at Holberton School Azerbaijan.
