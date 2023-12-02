@@ -1,7 +1,6 @@
 # Custom printf function
 
-## Functionbproduces output according to a format
-
+## Function produces output according to a format
 ### c
 ### s
 ### %
