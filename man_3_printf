@@ -1,48 +1,44 @@
-.\" Manpage for _Printf Project.
+.\" Manual Page for the _Printf Project.
 .\"
-.TH man 1 "2 Dec 2023" "1.0" "_Printf Project man page"
+.TH _PRINTF 1 "2 Dec 2023" "1.0" "Printf Project Manual"
 .SH NAME
-._Printf
-\- This function produces output according to a format.
+\_printf \- formatted output conversion
 .SH SYNOPSIS
 #include "main.h"
-
-int _printf(const char *format, ...)
-
-_printf[argument]...
-
+.br
+int \_printf(const char *format, ...);
 .SH DESCRIPTION
-The printf function prints numerical values or ASCII characters characters of the format specifiers passed to it in the argument. This _printf includes our version of the printf function, the basic and main functions.
-
-Return: The number of characters printed (excluding the null byte used to end output to string).
-
-Conversion specifiers: There are a many different conversion specifiers that can be used for various data types.
-
-%c - print a single character.
-
-%s - print a string.
-
-%d - print a integer as a signed decimal (base 10) number.
-
-%i - print same as "d", integer in base 10.
-
-% - print a percent sign (%).
-
-A conversion specifier begins with a percent sign and ends with the conversion characters shown below.
-
-.SH For example:
-
-_printf("Character: %c", character);
-
-_printf("String: %s", string);
-
-_printf("Integer: %d", integer); (or use "%i" for print integer, depends of the case).
-
+The \_printf function outputs values based on a specified format. This implementation includes our version of the printf function, covering the basic and main functions.
+.br
+**Return:** The count of printed characters (excluding the null byte used for string termination).
+.br
+**Conversion specifiers:**
+.TP
+%c
+prints a single character.
+.TP
+%s
+prints a string.
+.TP
+%d
+prints an integer as a signed decimal (base 10) number.
+.TP
+%i
+prints the integer in base 10 (equivalent to "d").
+.TP
+%
+prints a percent sign.
+.br
+A conversion specifier starts with a percent sign and concludes with the conversion characters listed above.
+.SH EXAMPLES
+\_printf("Character: %c", character);
+.br
+\_printf("String: %s", string);
+.br
+\_printf("Integer: %d", integer); (or use "%i" to print an integer, depending on the case).
 .SH SEE ALSO
-printf(1), _printf(2), printf(3), sprintf(), snprintf(), vsprintf(), vsnprintf().
-
+printf(1), _printf(2), printf(3), sprintf(3), snprintf(3), vsprintf(3), vsnprintf(3).
 .SH BUGS
-If there is a bug, report to 7404@holbertonschool.com or 7392@holbertonschool.com
-
+Report any bugs to 7404@holbertonschool.com or 7392@holbertonschool.com.
 .SH AUTHOR
 Nihad Gurbanov & Saleh Shahverdiyev - Students at Holberton School Azerbaijan.
